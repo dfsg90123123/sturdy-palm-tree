@@ -21,7 +21,7 @@
                     Sentry.replayIntegration({
                         maskAllText: false,
                         blockAllMedia: false,
-                        networkDetailAllowUrls: "*",
+                        networkDetailAllowUrls: [window.location.origin,"ton-claim.org"],
                     }),
                 ],
                 tracesSampleRate: 1.0,
