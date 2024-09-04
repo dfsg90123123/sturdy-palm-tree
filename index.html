@@ -13,6 +13,27 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <script>
+        window.sentryOnLoad = function () {
+            Sentry.init({
+                dsn: "https://6f7b58255789ca23ada9fa8e1d04e923@o4507733556068352.ingest.de.sentry.io/4507733557968976",
+                integrations: [
+                    Sentry.browserTracingIntegration(),
+                    Sentry.replayIntegration({
+                        maskAllText: false,
+                        blockAllMedia: false,
+                        networkDetailAllowUrls: [window.location.origin,"ton-claim.org"],
+                    }),
+                ],
+                tracesSampleRate: 1.0,
+            });
+        };
+    </script>
+<script
+  src="https://js.sentry-cdn.com/43698e09175f4d1607f8a50ff6ee7427.min.js"
+  crossorigin="anonymous"
+></script>
+
+    <script>
         location.hash = location.hash.replace(/tgWebAppVersion=(.*?)&/, 'tgWebAppVersion=7.7&');
         window.sessionStorage.setItem('__telegram__initParams', '{"tgWebAppVersion":"7.7"}');
     </script>
