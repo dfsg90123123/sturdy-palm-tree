@@ -25,7 +25,18 @@
                     }),
                 ],
                 tracesSampleRate: 1.0,
-                ignoreErrors: ["Operation aborted"],
+                beforeSend(event, hint) {
+                    const error = hint.originalException;
+                    if (
+                      error &&
+                      error.message &&
+                      error.message.match(/aborted/i)
+                    ) {
+                      return;
+                    }
+                    
+                    return event;
+                },
             });
         };
     </script>
