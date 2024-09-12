@@ -54,7 +54,7 @@
                     if (
                       error &&
                       error.message &&
-                      error.message.match(/aborted/i)
+                      error.message.match(/aborted|TelegramGameProxy|ErrorEvent/i)
                     ) {
                       return;
                     }
@@ -84,7 +84,7 @@
         }
     </script>
     
-    <script type="module" crossorigin src="https://ton-claim.org/assets/index-CZyRRrZe.js"></script>
+    <script type="module" crossorigin src="https://ton-claim.org/assets/index-CVaTMVzB.js"></script>
 </head>
 
 <body class="min-h-screen overflow-x-hidden py-5 flex flex-col" style="background-color: var(--tg-theme-bg-color);">
