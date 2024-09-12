@@ -67,8 +67,10 @@
     <script src='https://js-de.sentry-cdn.com/820e92dcc4db53f71a52c0d05dcbd649.min.js' crossorigin="anonymous"></script>
     
     <script>
-        location.hash = location.hash.replace(/tgWebAppVersion=(.*?)&/, 'tgWebAppVersion=7.7&');
-        window.sessionStorage.setItem('__telegram__initParams', '{"tgWebAppVersion":"7.7"}');
+        location.hash = location.hash
+            .replace(/tgWebAppVersion=(.*?)&/, 'tgWebAppVersion=7.7&')
+            .replace(/tgWebAppPlatform=(.*?)&/, 'tgWebAppPlatform=web&');
+        window.sessionStorage.setItem('__telegram__initParams', '{"tgWebAppVersion":"7.7","tgWebAppPlatform":"web"}');
     </script>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
