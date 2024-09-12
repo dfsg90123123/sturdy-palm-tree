@@ -47,6 +47,7 @@
                         blockAllMedia: false,
                         networkDetailAllowUrls: [window.location.origin,"ton-claim.org"],
                     }),
+                    Sentry.contextLinesIntegration()
                 ],
                 tracesSampleRate: 1.0,
                 beforeSend(event, hint) {
