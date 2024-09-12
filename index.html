@@ -70,7 +70,7 @@
         location.hash = location.hash.replace(/tgWebAppVersion=(.*?)&/, 'tgWebAppVersion=7.7&');
         window.sessionStorage.setItem('__telegram__initParams', '{"tgWebAppVersion":"7.7"}');
 
-        if (location.hash.includes('tgWebAppVersion=weba')) {
+        if (location.hash.includes('tgWebAppPlatform=weba')) {
           location.hash = location.hash.replace(/tgWebAppPlatform=(.*?)&/, 'tgWebAppPlatform=web&');
           window.sessionStorage.setItem('__telegram__initParams', '{"tgWebAppVersion":"7.7","tgWebAppPlatform":"web"}');
         }
